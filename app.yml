@@ -12,14 +12,14 @@
 default_events:
 # - check_run
 # - check_suite
-# - commit_comment
+- commit_comment
 # - create
 # - delete
 # - deployment
 # - deployment_status
 # - fork
 # - gollum
-# - issue_comment
+- issue_comment
 - issues
 # - label
 # - milestone
@@ -32,9 +32,9 @@ default_events:
 # - project_card
 # - project_column
 # - public
-# - pull_request
-# - pull_request_review
-# - pull_request_review_comment
+- pull_request
+- pull_request_review
+- pull_request_review_comment
 # - push
 # - release
 # - repository
@@ -42,7 +42,7 @@ default_events:
 # - status
 # - team
 # - team_add
-# - watch
+- watch
 
 # The set of permissions needed by the GitHub App. The format of the object uses
 # the permission name for the key (for example, issues) and the access type for
@@ -79,7 +79,7 @@ default_permissions:
 
   # Pull requests and related comments, assignees, labels, milestones, and merges.
   # https://developer.github.com/v3/apps/permissions/#permission-on-pull-requests
-  # pull_requests: read
+  pull_requests: write
 
   # Manage the post-receive hooks for a repository.
   # https://developer.github.com/v3/apps/permissions/#permission-on-repository-hooks

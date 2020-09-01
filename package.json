@@ -14,15 +14,21 @@
   ],
   "scripts": {
     "dev": "nodemon",
-    "start": "probot run ./index.js",
+    "start": "probot run ./src/index.js",
+    "start:prod": "probot run ./dist/index.js",
     "lint": "standard --fix",
     "test": "jest && standard",
-    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage",
+    "build": "babel ./src --out-dir ./dist"
   },
   "dependencies": {
     "probot": "^7.2.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.11.5",
+    "@babel/core": "^7.11.5",
+    "@babel/plugin-transform-regenerator": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
     "jest": "^22.4.3",
     "nock": "^13.0.4",
     "nodemon": "^1.17.2",
